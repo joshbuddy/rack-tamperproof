@@ -1,0 +1,7 @@
+= rack-tamperproof
+
+Description goes here.
+
+== Copyright
+
+Copyright (c) 2009 Joshua Hull. See LICENSE for details.
