@@ -1,12 +1,11 @@
-= Rack-Tamperproof
-
-Make your cookies tamperproof.
+= Rack::Tamperproof
 
 == Usage
 
-In your builder file use:
+  use Rack::Tamperproof(:default_key => "123u9ew90uqn") do
+    delete_for :just_delete_this
+    exception_for :don_t_tamper
+  end
 
-
-== Copyright
-
-Copyright (c) 2009 Joshua Hull. See LICENSE for details.
+  # delete_for cookies will delete if they are tampered with and your request passes through normally
+  # exception_for produces an exception if the cookie is tampered with
