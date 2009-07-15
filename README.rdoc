@@ -1,6 +1,11 @@
-= rack-tamperproof
+= Rack-Tamperproof
 
-Description goes here.
+Make your cookies tamperproof.
+
+== Usage
+
+In your builder file use:
+
 
 == Copyright
 
