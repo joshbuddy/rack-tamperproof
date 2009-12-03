@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "rack-tamperproof"
-    gem.summary = %Q{TODO}
+    gem.summary = "Rack middleware that provides tamper-proof cookies"
     gem.email = "joshbuddy@gmail.com"
     gem.homepage = "http://github.com/joshbuddy/rack-tamperproof"
     gem.authors = ["Joshua Hull"]
