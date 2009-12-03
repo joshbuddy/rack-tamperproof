@@ -16,6 +16,8 @@ end
 module Rack
   class Tamperproof
     
+    Tampered = Class.new(RuntimeError)
+    
     class Protector
       
       def initialize(name, secret, postfix = '_key')
@@ -50,7 +52,7 @@ module Rack
       
       class ExceptionProtector < Protector
         def validate(request)
-          valid?(request) or raise
+          valid?(request) or raise(Tampered.new)
         end
       end
 

@@ -1,13 +1,8 @@
 require 'spec'
 require 'rubygems'
-require 'cgi'
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'rack-tamperproof'
-
-Spec::Runner.configure do |config|
-  
-end
 
 def build_builder(config, key = "testing this key", &block)
   app = Rack::Builder.new do

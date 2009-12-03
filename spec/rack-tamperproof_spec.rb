@@ -73,7 +73,7 @@ describe "Rack-Tamperproof" do
         exception_for :test
       }).call(Rack::MockRequest.env_for('/', {
         'HTTP_COOKIE' => build_cookie_header({'test' => 'protected2', 'test_key' => Rack::Tamperproof::Protector.sign('test', 'protected', 'testing this key')})
-      }))}.should raise_error
+      }))}.should raise_error Rack::Tamperproof::Tampered
 
     end
 
